@@ -4,26 +4,26 @@ import Epreuve.Formula
 type World = [String] --type world 
 
 
---Generation du momde 0
+-- Génération du monde 0
 w0::World
 w0 = ["p1" , "p2"]
 
---Generation du momde 1
+-- Génération du monde 1
 w1::World
 w1 = ["t1" , "t2"]
 
---Generation du momde 2
+-- Génération du monde 2
 w2::World
 w2 = ["p1" , "p2","t1" , "t2"]
 
 
---Generer tous les mondes possibles d'unn ensemble donne
+-- Générer tous les mondes possibles d'un ensemble donné
 genAllWorlds::World-> [World]
 genAllWorlds [] = [[]]
 genAllWorlds (x:xs) = let other= genAllWorlds xs in other ++ map (x:) other
 
 
---Fonction sat pour verifier si un monde satisfait une propriete
+-- Fonction sat pour vérifier si un monde satisfait une propriété
 sat :: World -> Formula -> Bool
 sat [] _ = False
 sat _ T = True
@@ -39,7 +39,7 @@ sat w (Eqv a b) = sat w a == sat w b
 
 
 
---extrait la variable d'une formule pour generer les mondes possibles
+-- Extraie la variable d'une formule pour générer les mondes possibles
 extract:: Formula -> World
 extract T = []
 extract F = []
@@ -51,7 +51,7 @@ extract (Imp a b) = extract a ++ extract b
 extract (Eqv a b) = extract a ++ extract b      
 
 
---supprime les doublons d'une liste de string pour ne pas generer des mondes en double
+-- Supprime les doublons d'une liste de string pour ne pas générer des mondes en double
 supprimeDoublons :: [String] -> [String]
 supprimeDoublons [] = []
 supprimeDoublons (x:xs) 
@@ -59,7 +59,7 @@ supprimeDoublons (x:xs)
     | otherwise   = x : supprimeDoublons xs
 
 
---Trouver tous les mondes qui satisfont une formule
+-- Trouver tous les mondes qui satisfont une formule
 findWorlds :: Formula -> [World]
 findWorlds phi = 
     let toutesLesVars = extract phi

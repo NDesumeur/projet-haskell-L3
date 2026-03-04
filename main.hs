@@ -1,4 +1,3 @@
-
 import Epreuve.Epreuve
 
 -- Tests pour genAllWorlds [cite: 143]
@@ -29,7 +28,7 @@ testFindWorlds =
     ]
 
 
-    -- Fonction utilitaire pour vérifier un groupe de tests (comme dans exo.hs)
+-- Fonction utilitaire pour vérifier un groupe de tests (comme dans exo.hs)
 test :: [Bool] -> Bool
 test [] = False
 test [x] = x

@@ -9,7 +9,7 @@ data Formula = T          -- Vrai
              | Imp (Formula) (Formula) -- Implication
              | Eqv (Formula) (Formula) -- Équivalence
 
---Redefinition de Show poue un affichage plus personnalise
+--Redéfinition de Show pour un affichage plus personnalisé
 instance Show Formula where
   show T = "True"
   show F = "False"
@@ -43,6 +43,6 @@ reglement = Or
 
 
 
---representer le challenge 1
+-- Représenter le challenge 1
 challenge1 :: Formula
 challenge1 = And constraint reglement
