@@ -1,4 +1,5 @@
 import Epreuve.Epreuve
+import ChallengeN.ChaN
 
 -- Tests pour genAllWorlds [cite: 143]
 testGenAllWorlds :: [Bool]
