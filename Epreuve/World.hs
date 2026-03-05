@@ -17,52 +17,5 @@ w2::World
 w2 = ["p1" , "p2","t1" , "t2"]
 
 
--- Générer tous les mondes possibles d'un ensemble donné
-genAllWorlds::World-> [World]
-genAllWorlds [] = [[]]
-genAllWorlds (x:xs) = let other= genAllWorlds xs in other ++ map (x:) other
 
 
--- Fonction sat pour vérifier si un monde satisfait une propriété
-sat :: World -> Formula -> Bool
-sat [] _ = False
-sat _ T = True
-sat _ F = False
-sat (x:xs) (Var s)
-    | x==s = True
-    | otherwise = sat xs (Var s)
-sat w (Not f) = not (sat w f)
-sat w (And a b) = sat w a && sat w b
-sat w (Or a b) = sat w a || sat w b
-sat w (Imp a b) = not (sat w a) || sat w b
-sat w (Eqv a b) = sat w a == sat w b
-
-
-
--- Extraie la variable d'une formule pour générer les mondes possibles
-extract:: Formula -> World
-extract T = []
-extract F = []
-extract (Var s) = [s]
-extract (Not f) = extract f
-extract (And a b) = extract a ++ extract b
-extract (Or a b) = extract a ++ extract b
-extract (Imp a b) = extract a ++ extract b
-extract (Eqv a b) = extract a ++ extract b      
-
-
--- Supprime les doublons d'une liste de string pour ne pas générer des mondes en double
-supprimeDoublons :: [String] -> [String]
-supprimeDoublons [] = []
-supprimeDoublons (x:xs) 
-    | x `elem` xs = supprimeDoublons xs
-    | otherwise   = x : supprimeDoublons xs
-
-
--- Trouver tous les mondes qui satisfont une formule
-findWorlds :: Formula -> [World]
-findWorlds phi = 
-    let toutesLesVars = extract phi
-        varsUniques   = supprimeDoublons toutesLesVars
-        mondes        = genAllWorlds varsUniques
-    in [ w | w <- mondes, sat w phi ]
