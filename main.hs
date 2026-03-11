@@ -17,6 +17,12 @@ main = do
     
     putStrLn "\nMondes satisfaisant le Challenge 2 :"
     print (findWorlds cha2)
+
+    putStrLn "Formule du Challenge 3 :"
+    print cha3
+    
+    putStrLn "\nMondes satisfaisant le Challenge 3 :"
+    print (findWorlds cha3)
     
     putStrLn ""
     testAll
