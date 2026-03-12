@@ -4,7 +4,7 @@ import Epreuve.Epreuve
 
 -- L'affiche 1 : "Un tigre dans une des deux cellules"
 door1_5 :: Formula
-door1_5 = Or (Var "t1") (Var "t2")
+door1_5 = Not (Eqv (Var "p1") (Var "p2"))
 
 -- L'affiche 2 : "Le tigre est dans l'autre cellule"
 door2_5 :: Formula

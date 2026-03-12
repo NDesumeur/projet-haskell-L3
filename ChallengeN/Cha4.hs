@@ -4,7 +4,7 @@ import Epreuve.Epreuve
 
 -- L'affiche 1 : "Une peluche dans les deux cellules"
 door1_4 :: Formula
-door1_4 = And (Var "p1") (Var "p2")
+door1_4 = Eqv (Var "p1") (Var "p2")
 
 -- L'affiche 2 : "Il y a une peluche dans l'autre cellule"
 door2_4 :: Formula
