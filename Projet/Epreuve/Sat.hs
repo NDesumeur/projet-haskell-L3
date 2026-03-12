@@ -19,12 +19,12 @@ sat w (Eqv a b) = sat w a == sat w b
 
 
 
--- Tests pour sat [cite: 143]
+-- Tests pour sat
 testSat :: [Bool]
 testSat = 
-    [ sat ["p1"] (Var "p1") == True                           -- [cite: 77]
-    , sat ["p2"] (Var "p1") == False                          -- [cite: 77]
-    , sat ["p1", "t2"] (And (Var "p1") (Var "t2")) == True    -- [cite: 79]
-    , sat ["p1"] (Not (Var "p1")) == False                    -- La négation [cite: 40]
+    [ sat ["p1"] (Var "p1") == True                          
+    , sat ["p2"] (Var "p1") == False                         
+    , sat ["p1", "t2"] (And (Var "p1") (Var "t2")) == True   
+    , sat ["p1"] (Not (Var "p1")) == False                    -- La négation 
     , sat ["p1", "t1"] (Imp (Var "p1") (Var "t1")) == True              -- F -> F est Vrai             
     ]

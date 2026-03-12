@@ -13,7 +13,7 @@ test [] = False
 test [x] = x
 test (x:xs) = x && test xs 
 
--- Exécution globale des tests [cite: 145]
+-- Exécution globale des tests 
 testAll :: IO ()
 testAll = do
     putStrLn "--- Exécution des tests du Projet ---"
@@ -28,7 +28,7 @@ testAll = do
     putStrLn ("sat          : " ++ (if resSat  then "OK" else "ERREUR"))
     putStrLn ("findWorlds   : " ++ (if resFind then "OK" else "ERREUR"))
     
-    -- Conclusion [cite: 145]
+    -- Conclusion 
     if resGen && resSat && resFind
         then putStrLn "\nFélicitations : Tous les tests ont réussi !" 
         else putStrLn "\nAttention : Certains tests ont échoué."

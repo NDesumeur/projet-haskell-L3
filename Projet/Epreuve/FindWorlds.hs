@@ -34,7 +34,7 @@ findWorlds phi =
     in [ w | w <- mondes, sat w phi ]
 
 
--- Tests pour findWorlds [cite: 144]
+-- Tests pour findWorlds 
 testFindWorlds :: [Bool]
 testFindWorlds = 
     -- La formule (p1) dans l'univers {p1} ne doit retourner qu'un seul monde
