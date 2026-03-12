@@ -44,5 +44,3 @@ main = do
 
     putStrLn ""
     testAll
-
-    print(genAllWorlds w3)

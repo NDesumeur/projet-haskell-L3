@@ -2,11 +2,17 @@ module ChallengeN.Cha6 where
 import Epreuve.Epreuve
 
 
-constraint3 :: Formula
-constraint3 = And(And 
+constraint2 :: Formula
+constraint2 = And(And 
     (Not (And (Var "p1") (Var "t1"))) -- Pas p1 ET t1
     (Not (And (Var "p2") (Var "t2")))) -- Pas p2 ET t2
-    ((Not (And (Var "p3") (Var "t3"))))
+    ((Not (And (Var "p3") (Var "t3")))) -- Pas p3 ET t3
+
+constraint3 :: Formula
+constraint3 = And 
+    (Not (And (Var "p2") (Var "p3")))
+    (And (Not (And (Var "p1") (Var "p2")))
+    (Not (And (Var "p1") (Var "p3"))))
 
 -- L'affiche 1 : "Un tigre dans une des deux cellules"
 door1_6 :: Formula
@@ -36,6 +42,4 @@ reglement6 = Or
 
 
 cha6 :: Formula
-cha6 = And constraint reglement6
-
--- Cellule 3 ?
+cha6 = And (And constraint2 constraint3) (reglement6)
