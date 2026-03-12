@@ -1,6 +1,6 @@
-module Epreuve.Sat where
-import Epreuve.Formula
-import Epreuve.World
+module Projet.Epreuve.Sat where
+import Projet.Epreuve.Formula
+import Projet.Epreuve.World
 
 
 -- Fonction sat pour vérifier si un monde satisfait une propriété

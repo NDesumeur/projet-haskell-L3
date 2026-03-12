@@ -1,6 +1,6 @@
-module Epreuve.GenAllWorlds where
-import Epreuve.Formula
-import Epreuve.World
+module Projet.Epreuve.GenAllWorlds where
+import Projet.Epreuve.Formula
+import Projet.Epreuve.World
 
 
 -- Générer tous les mondes possibles d'un ensemble donné

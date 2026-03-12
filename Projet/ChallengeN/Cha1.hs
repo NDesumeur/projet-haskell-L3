@@ -1,5 +1,5 @@
-module ChallengeN.Cha1 where
-import Epreuve.Epreuve
+module Projet.ChallengeN.Cha1 where
+import Projet.Epreuve.Epreuve
 
 cha1 :: Formula
 cha1 = challenge1

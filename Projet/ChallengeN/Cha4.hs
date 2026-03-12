@@ -1,5 +1,5 @@
-module ChallengeN.Cha4 where
-import Epreuve.Epreuve
+module Projet.ChallengeN.Cha4 where
+import Projet.Epreuve.Epreuve
 
 
 -- L'affiche 1 : "Une peluche dans les deux cellules"

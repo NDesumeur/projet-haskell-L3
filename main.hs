@@ -1,5 +1,4 @@
-import Epreuve.Epreuve
-import ChallengeN.ChaN
+import Projet.ModuleGlobal
 
 
 

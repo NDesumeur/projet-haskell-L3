@@ -1,4 +1,4 @@
-module Epreuve.Formula where
+module Projet.Epreuve.Formula where
 
 data Formula = T          -- Vrai
              | F          -- Faux

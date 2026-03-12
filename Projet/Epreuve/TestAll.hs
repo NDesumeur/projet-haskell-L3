@@ -1,9 +1,9 @@
-module Epreuve.TestAll where
-import Epreuve.Formula
-import Epreuve.World
-import Epreuve.Sat
-import Epreuve.GenAllWorlds
-import Epreuve.FindWorlds
+module Projet.Epreuve.TestAll where
+import Projet.Epreuve.Formula
+import Projet.Epreuve.World
+import Projet.Epreuve.Sat
+import Projet.Epreuve.GenAllWorlds
+import Projet.Epreuve.FindWorlds
 
 
 

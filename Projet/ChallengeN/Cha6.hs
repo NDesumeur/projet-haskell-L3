@@ -1,5 +1,5 @@
-module ChallengeN.Cha6 where
-import Epreuve.Epreuve
+module Projet.ChallengeN.Cha6 where
+import Projet.Epreuve.Epreuve
 
 
 constraint2 :: Formula

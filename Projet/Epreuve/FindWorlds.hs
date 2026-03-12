@@ -1,8 +1,8 @@
-module Epreuve.FindWorlds where
-import Epreuve.Formula
-import Epreuve.World
-import Epreuve.Sat
-import Epreuve.GenAllWorlds
+module Projet.Epreuve.FindWorlds where
+import Projet.Epreuve.Formula
+import Projet.Epreuve.World
+import Projet.Epreuve.Sat
+import Projet.Epreuve.GenAllWorlds
 
 
 -- Extraie la variable d'une formule pour générer les mondes possibles
