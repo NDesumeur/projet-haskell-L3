@@ -1,10 +1,9 @@
-import Projet.ModuleGlobal
+import CPL.ModuleGlobal
 
 
 
 main :: IO ()
 main = do
-    -- Affichage du challenge 1 pour vérification visuelle [cite: 47]
     putStrLn "Formule du Challenge 1 :"
     print cha1
     

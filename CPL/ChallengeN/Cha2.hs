@@ -1,8 +1,8 @@
-module Projet.ChallengeN.Cha2 where
-import Projet.Epreuve.Epreuve
+module CPL.ChallengeN.Cha2 where
+import CPL.Epreuve.Epreuve
 
 
--- L'affiche 1 : "Une pelluche dans une des deux cellules"
+-- L'affiche 1 : "Une peluche dans une des deux cellules"
 door1_2 :: Formula
 door1_2 = Or (Var "p1") (Var "p2")
 

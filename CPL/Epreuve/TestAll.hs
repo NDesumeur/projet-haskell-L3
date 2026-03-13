@@ -1,9 +1,9 @@
-module Projet.Epreuve.TestAll where
-import Projet.Epreuve.Formula
-import Projet.Epreuve.World
-import Projet.Epreuve.Sat
-import Projet.Epreuve.GenAllWorlds
-import Projet.Epreuve.FindWorlds
+module CPL.Epreuve.TestAll where
+import CPL.Epreuve.Formula
+import CPL.Epreuve.World
+import CPL.Epreuve.Sat
+import CPL.Epreuve.GenAllWorlds
+import CPL.Epreuve.FindWorlds
 
 
 
@@ -16,7 +16,7 @@ test (x:xs) = x && test xs
 -- Exécution globale des tests 
 testAll :: IO ()
 testAll = do
-    putStrLn "--- Exécution des tests du Projet ---"
+    putStrLn "--- Exécution des tests du CPL ---"
     
     -- On calcule les résultats individuellement 
     let resGen  = test testGenAllWorlds

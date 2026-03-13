@@ -1,5 +1,5 @@
-module Projet.Epreuve.World where
-import Projet.Epreuve.Formula
+module CPL.Epreuve.World where
+import CPL.Epreuve.Formula
 
 type World = [String] --type world 
 
