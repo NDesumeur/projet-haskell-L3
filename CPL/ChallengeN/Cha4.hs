@@ -1,5 +1,5 @@
 module CPL.ChallengeN.Cha4 where
-import Projet.Epreuve.Epreuve
+import CPL.Epreuve.Epreuve
 
 
 -- L'affiche 1 : "Aucune importance sur le choix de la cellule"

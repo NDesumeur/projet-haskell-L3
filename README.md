@@ -4,4 +4,4 @@
 
 Pour exécuter le code, deux solutions sont à votre disposition :
 - make
-- Lancer ghci puis :l Projet.ModuleGlobal
+- Lancer ghci puis :l CPL.ModuleGlobal
