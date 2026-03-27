@@ -27,5 +27,10 @@ bobIgn :: EpiFormula
 bobIgn = And (Not (Knows "b" (Var "bs"))) (Not (Knows "b" (Not (Var "bs"))))
 
 problem1 :: EpiFormula
-problem1 =
-  And (And aliceIgn bobIgn) (After fatherAnn (And aliceIgn (After (Knows "b" (Var "bs")) (And (Not aliceIgn) (Not bobIgn)))))
+problem1 = And (And aliceIgn bobIgn) (After fatherAnn (And aliceIgn (After (Knows "b" (Var "bs")) (And (Not aliceIgn) (Not bobIgn)))))
+
+epiSat :: EpiState -> EpiFormula -> Bool
+epiSat s phi = 
+
+update :: EpiState -> EpiFormula -> EpiState
+update s phi = 
