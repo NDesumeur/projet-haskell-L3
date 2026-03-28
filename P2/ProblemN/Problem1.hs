@@ -15,3 +15,16 @@ s0 = (interp, indis, 01)
     indis "b" w | w == 00 || w == 01 = [00, 01]     -- De meme pour Bob
                 | w == 10 || w == 11 = [10, 11]
     indis _ w = [w] -- un monde seul est indisernable de lui meme
+
+fatherAnn :: EpiFormula
+fatherAnn = Or (Var "as") (Var "bs")
+
+aliceIgn :: EpiFormula
+aliceIgn = And (Not (Knows "a" (Var "as"))) (Not (Knows "a" (Not (Var "as"))))
+
+bobIgn :: EpiFormula
+bobIgn = And (Not (Knows "b" (Var "bs"))) (Not (Knows "b" (Not (Var "bs"))))
+
+problem2 :: EpiFormula
+problem2 =
+  And (And aliceIgn bobIgn) (After fatherAnn (And aliceIgn (After (Knows "b" (Var "bs")) (And (Not aliceIgn) (Not bobIgn)))))
