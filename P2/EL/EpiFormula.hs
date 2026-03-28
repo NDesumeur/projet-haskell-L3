@@ -1,5 +1,6 @@
 module P2.EL.EpiFormula where
-import P2.EL.EpiState (Prop, Agent)
+import P2.EL.Prop Prop
+import P2.EL.Agent Agent
 
 data EpiFormula
 	= T                           -- Vrai
