@@ -1,9 +1,9 @@
-module Problem3 (problem3, s0) where
+module P2.ProblemN.Problem3 (problem3, s3) where
 
-import EL
+import P2.EL.EL
 
-s0 :: EpiState
-s0 = (interp, indis, 111)
+s3 :: EpiState
+s3 = (interp, indis, 111)
     -- Le monde reel est 111 car Alice, Bob et Caroline sont tous sales.
   where
     -- Interpretation des mondes

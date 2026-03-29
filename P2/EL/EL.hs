@@ -1,4 +1,4 @@
-module EL 
+module P2.EL.EL
   ( Prop
   , Agent
   , World

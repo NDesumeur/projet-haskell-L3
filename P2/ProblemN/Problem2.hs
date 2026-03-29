@@ -1,8 +1,8 @@
-module Problem2 (problem2, s0) where
-import EL
+module P2.ProblemN.Problem2 (problem2, s2) where
+import P2.EL.EL
 
-s0 :: EpiState
-s0 = (interp, indis, 11)
+s2 :: EpiState
+s2 = (interp, indis, 11)
     -- Le monde reel est 11 car dans le probleme 2, Alice et Bob sont TOUS LES DEUX sales.
   where
     interp "as" = [10, 11] -- Alice est sale dans les mondes 10 et 11

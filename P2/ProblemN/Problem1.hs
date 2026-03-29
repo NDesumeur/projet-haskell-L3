@@ -1,8 +1,8 @@
-module Problem1 (problem1, s0) where
-import EL
+module P2.ProblemN.Problem1 (problem1, s1) where
+import P2.EL.EL
 
-s0 :: EpiState
-s0 = (interp, indis, 01)
+s1 :: EpiState
+s1 = (interp, indis, 01)
     --le premier nombre represente Alice si elle est propre 0 ou sale 1
     --le deuxieme nombre represente Bob si elle est propre 0 ou sale 1
   where

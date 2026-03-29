@@ -1,10 +1,9 @@
-module Problem4 (problem4, s0) where
-
-import EL
+module P2.ProblemN.Problem4 (problem4, s4) where
+import P2.EL.EL
 
 -- L'état initial où Anne a le nombre 1 et Bill a le nombre 2 (représenté par le monde 12)
-s0 :: EpiState
-s0 = (interp, indis, 12)
+s4 :: EpiState
+s4 = (interp, indis, 12)
   where
     -- Interprétation: "bX" = Bill a X, "aX" = Anne a X.
     -- Les mondes possibles sont les paires de nombres consécutifs (ex: 12, 21).
